@@ -21,17 +21,20 @@ public class Prodotto {
 		this.iva = iva;
 	}
 
-	void prezzoBase() {
-		System.out.println("Prezzo prodotto: " + prezzo + "€");
+	String prezzoBase() {
+		String prezzoProdotto = "Prezzo prodotto: " + prezzo + "€";
+		return prezzoProdotto;
 	}
 
-	void prezzoIva() {
+	String prezzoIva() {
 		double prezzoIvato = ((prezzo * iva) / 100) + prezzo;
-		System.out.println("Prezzo Ivato: " + prezzoIvato + "€");
+		String s = ("Prezzo Ivato: " + prezzoIvato + "€");
+		return s;
 	}
 
-	void nomeCompleto() {
+	String nomeCompleto() {
 		String nc = codice + "-" + nome;
-		System.out.println("Nome prodotto completo: " + nc);
+		String s = ("Nome prodotto completo: " + nc);
+		return s;
 	}
 }

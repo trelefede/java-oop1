@@ -5,8 +5,12 @@ public class Main {
 
 		Prodotto tostaPane = new Prodotto("tostapane", "tosta il pane", 29.9, 22);
 
-		tostaPane.nomeCompleto();
-		tostaPane.prezzoBase();
-		tostaPane.prezzoIva();
+		String nome = tostaPane.nomeCompleto();
+		String prezzo = tostaPane.prezzoBase();
+		String prezzoIvato = tostaPane.prezzoIva();
+
+		System.out.println(nome);
+		System.out.println(prezzo);
+		System.out.println(prezzoIvato);
 	}
 }

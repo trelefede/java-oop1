@@ -1,0 +1,39 @@
+package org.lessons.java.jana60.bank;
+
+import java.util.Random;
+
+public class Conto {
+
+	Random r = new Random();
+
+	int numeroConto;
+	String nomeProprietario;
+	double saldo;
+
+	public Conto(String nomeProprietario) {
+		super();
+		this.nomeProprietario = nomeProprietario;
+		numeroConto = (r.nextInt(1000)) + 1;
+		saldo = 0;
+	}
+
+	void versamento(double versato) {
+		saldo += versato;
+		System.out.println("Operazione riuscita! Nuovo saldo: " + saldo + "€");
+	}
+
+	void prelievo(double prelevato) {
+		if (saldo >= prelevato) {
+			saldo += (-prelevato);
+			System.out.println("Operazione riuscita! Nuovo saldo: " + saldo + "€");
+		} else {
+			System.out.println("Operazione negata! Somma non disponibile.");
+		}
+	}
+
+	void infoConto() {
+		System.out.println("Proprietario conto: " + nomeProprietario);
+		System.out.println("Numero conto: " + numeroConto);
+		System.out.println("Saldo conto: " + saldo);
+	}
+}

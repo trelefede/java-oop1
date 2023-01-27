@@ -36,5 +36,6 @@ public class Prodotto {
 		String nc = codice + "-" + nome;
 		String s = ("Nome prodotto completo: " + nc);
 		return s;
+
 	}
 }

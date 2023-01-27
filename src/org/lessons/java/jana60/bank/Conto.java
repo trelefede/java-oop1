@@ -19,14 +19,12 @@ public class Conto {
 
 	void versamento(double versato) {
 		saldo += versato;
-		this.saldo = saldo;
 		System.out.println("Operazione riuscita! Nuovo saldo: " + saldo + "€");
 	}
 
 	void prelievo(double prelevato) {
 		if (saldo >= prelevato) {
 			saldo += (-prelevato);
-			this.saldo = saldo;
 			System.out.println("Operazione riuscita! Nuovo saldo: " + saldo + "€");
 		} else {
 			System.out.println("Operazione negata! Somma non disponibile.");

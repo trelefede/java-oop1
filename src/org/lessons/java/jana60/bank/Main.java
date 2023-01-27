@@ -32,8 +32,6 @@ public class Main {
 
 		} while (!operazione.equalsIgnoreCase("fine"));
 
-		System.out.println(contoInfo);
-
 		sc.close();
 	}
 }

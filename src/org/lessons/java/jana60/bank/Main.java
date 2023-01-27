@@ -11,8 +11,8 @@ public class Main {
 		String nomeTitolare = sc.nextLine();
 
 		Conto nuovoConto = new Conto(nomeTitolare);
-
-		nuovoConto.infoConto();
+		String contoInfo = nuovoConto.infoConto();
+		System.out.println(contoInfo);
 
 		String operazione;
 
@@ -31,6 +31,8 @@ public class Main {
 			}
 
 		} while (!operazione.equalsIgnoreCase("fine"));
+
+		System.out.println(contoInfo);
 
 		sc.close();
 	}

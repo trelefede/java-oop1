@@ -19,21 +19,23 @@ public class Conto {
 
 	void versamento(double versato) {
 		saldo += versato;
+		this.saldo = saldo;
 		System.out.println("Operazione riuscita! Nuovo saldo: " + saldo + "€");
 	}
 
 	void prelievo(double prelevato) {
 		if (saldo >= prelevato) {
 			saldo += (-prelevato);
+			this.saldo = saldo;
 			System.out.println("Operazione riuscita! Nuovo saldo: " + saldo + "€");
 		} else {
 			System.out.println("Operazione negata! Somma non disponibile.");
 		}
 	}
 
-	void infoConto() {
-		System.out.println("Proprietario conto: " + nomeProprietario);
-		System.out.println("Numero conto: " + numeroConto);
-		System.out.println("Saldo conto: " + saldo);
+	String infoConto() {
+		String s = ("Proprietario conto: " + nomeProprietario + "\n" + "Numero conto: " + numeroConto + "\n"
+				+ "Saldo conto: " + saldo);
+		return s;
 	}
 }
